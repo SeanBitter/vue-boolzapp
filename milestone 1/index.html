@@ -52,7 +52,7 @@
 
                 <!-- ricerca chat -->
                 <div class="p-1">
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-1">
                         <button class="btn btn-outline-secondary px-4" type="button" id="button-addon1"><i class="fa-solid fa-magnifying-glass"></i></button>
                         <input type="text" class="form-control display-7" placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon" aria-describedby="button-addon1">
                     </div>
@@ -63,7 +63,7 @@
                 <div class="d-flex flex-grow-1 overflow-auto">
                     <ul class="list-unstyled w-100">
                         <li v-for="(contact, i) in contacts">
-                            <div class="d-flex p-2">
+                            <div class="d-flex p-2 border-bottom border-light">
                                 <div class="flex-shrink-0 px-2">
                                     <div class="img-size">
                                         <img :src="'../img/avatar' + contact.avatar + '.jpg'" :alt="'Avatar ' + contact.name" class="w-100 rounded-circle">
