@@ -1,0 +1,20 @@
+:root {
+    --bs-body-bg: #DCDBD2;
+    --bs-body-bg-rgb: 220, 219, 210;
+}
+
+.bg-position {
+    background-color: #009688;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.container-app {
+    position: relative;
+    height: 95vh;
+    margin: 2.5vh 0;
+    background-color: white;
+}

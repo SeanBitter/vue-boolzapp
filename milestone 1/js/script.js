@@ -172,3 +172,13 @@ const contatti = [
         ],
     },
 ];
+
+new Vue(
+    {
+        el: "#app",
+
+        data: {
+
+        },
+    },
+);
