@@ -9,7 +9,7 @@ v-for, visualizzare nome e immagine di ogni contatto.
 
 */
 
-const contatti = [
+const contacts = [
     {
         name: "Michele",
         avatar: "_1",
@@ -178,7 +178,7 @@ new Vue(
         el: "#app",
 
         data: {
-
+            contacts: contacts,
         },
     },
 );

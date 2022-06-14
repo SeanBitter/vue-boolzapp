@@ -1,11 +1,17 @@
 :root {
     --bs-body-bg: #DCDBD2;
     --bs-body-bg-rgb: 220, 219, 210;
+
+    --bs-primary: #8EDAFC;
+    --bs-primary-rgb: 142, 218, 252;
+
+    --bs-light: #DCDBD2;
+    --bs-light-rgb: 220, 219, 210;
 }
 
 .bg-position {
     background-color: #009688;
-    height: 100px;
+    height: 120px;
     position: absolute;
     top: 0;
     left: 0;
@@ -17,4 +23,70 @@
     height: 95vh;
     margin: 2.5vh 0;
     background-color: white;
+    padding: 0;
+}
+
+.contacts-content {
+    width: 35%;
+}
+
+.main-content {
+    width: 65%;
+}
+
+.user-bar {
+    background-color: #EAEAEA;
+    height: 60px;
+    padding: 0.5rem;
+}
+
+.user-nav {
+    color: #B1B1B1;
+}
+
+.notice {
+    background-color: #8EDAFC;
+}
+
+.bg-bell {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.img-size {
+    width: 50px;
+    height: 50px;
+}
+
+.img-size-bar {
+    width: 45px;
+    height: 45px;
+}
+
+.display-7 {
+    font-size: 0.8rem;
+}
+
+.chat-section {
+    background-image: url(../../img/mine.jpg);
+}
+
+.message {
+    max-width: 300px;
+    background-color: white;
+}
+
+.message-green {
+    background-color: #D5F9BA;
+    float: right;
+}
+
+.text-position {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    font-size: 0.6rem;
+    color: rgb(174, 187, 189);
 }
