@@ -178,6 +178,14 @@ new Vue(
 
         data: {
             contacts: contacts,
+            activeContact: contacts[0],
         },
+
+        methods: {
+            setActiveContact(contact) {
+                this.activeContact = contact;
+            }
+        }
     },
 );
+

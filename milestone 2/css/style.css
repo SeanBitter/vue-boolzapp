@@ -38,7 +38,6 @@
 
 .user-bar {
     background-color: #EAEAEA;
-    /* height: 60px; */
     padding: 0.5rem;
 }
 
@@ -71,18 +70,27 @@
     font-size: 0.8rem;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .chat-section {
     background-image: url(../../img/mine.jpg);
 }
 
 .message {
+    min-width: 150px;
     max-width: 300px;
     background-color: white;
 }
 
-.message-green {
+.message-received {
+    align-self: flex-start;
+}
+
+.message-sent {
     background-color: #D5F9BA;
-    float: right;
+    align-self: flex-end;
 }
 
 .text-position {

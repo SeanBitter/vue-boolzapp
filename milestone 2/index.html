@@ -62,17 +62,17 @@
                 <!-- lista contatti -->
                 <div class="d-flex flex-grow-1 overflow-auto">
                     <ul class="list-unstyled w-100">
-                        <li v-for="(contact, i) in contacts">
-                            <div class="d-flex p-2 border-bottom border-light">
+                        <li v-for="(contact, i) in contacts" @click="setActiveContact(contact)">
+                            <div class="d-flex p-2 border-bottom border-light pointer">
                                 <div class="flex-shrink-0 px-2">
                                     <div class="img-size">
-                                        <img :src="'../img/avatar' + contact.avatar + '.jpg'" :alt="'Avatar ' + contact.name" class="w-100 rounded-circle">
+                                        <img :src="'../img/avatar' + contact.avatar + '.jpg'" :alt="'Avatar ' + contact.name" class="w-100 rounded-circle" @click="setActiveContact(contact)">
                                     </div>
                                 </div>
                             
                                 <div class="d-flex flex-grow-1">
                                     <div class="text">
-                                        <div>{{contact.name}}</h6></div>
+                                        <div>{{contact.name}}</div>
                                         <div class="text-black-50 display-7">Ultimo messaggio inviato</div>
                                     </div>
                                 </div>
@@ -93,9 +93,9 @@
                 <div class="user-bar d-flex justify-content-between flex-shrink-0 border-start border-light">
                     
                         <div class="d-flex">
-                            <img src="../img/avatar_1.jpg" alt="Avatar Michele" class="img-size-bar rounded-circle">
+                            <img :src="'../img/avatar' + activeContact.avatar + '.jpg'" :alt="'Avatar ' + activeContact.name" class="img-size-bar rounded-circle">
                             <div class="my-auto ps-2">
-                                <div>Michele</div>
+                                <div>{{ activeContact.name }}</div>
                                 <div class="display-7 text-black-50">Ultimo accesso oggi alle 17.44</div>
                             </div>
                         </div>
@@ -109,17 +109,13 @@
 
                 <!-- chat section -->
                 <div class="chat-section flex-grow-1 overflow-auto p-5">
-                    <div class="message rounded p-3 my-2 position-relative">
-                        <div>Hey! Come va?</div>
-                        <div class="text-position">17.25</div>
-                    </div>
-                    <div class="message rounded p-3 my-2 position-relative">
-                        <div>Hai finito l'esercizio di Boolzapp?</div>
-                        <div class="text-position">17.26</div>
-                    </div>
-                    <div class="message message-green rounded p-3 my-2 position-relative">
-                        <div>Magari! Ancora è lunga...</div>
-                        <div class="text-position">17.28</div>
+                    <div class="d-flex flex-column" v-for="message in activeContact.messages">
+                        <div class="message rounded p-3 my-2 position-relative" :class="{'message-received' : message.status === 'received',
+                                                                                        'message-sent' : message.status === 'sent'}"> 
+                            <div class="">{{ message.message }}</div>
+                            <div class="text-position">{{ message.date }}</div>
+
+                        </div>
                     </div>
                 </div>
 
