@@ -172,6 +172,7 @@ const contacts = [
             },
         ],
     },
+    
 ];
 
 new Vue(
@@ -234,4 +235,3 @@ new Vue(
         },
     },
 );
-
