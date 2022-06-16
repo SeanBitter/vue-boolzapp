@@ -74,6 +74,10 @@
     cursor: pointer;
 }
 
+.my-active {
+    background-color: rgb(212, 213, 215);
+}
+
 .chat-section {
     background-image: url(../../img/mine.jpg);
 }
