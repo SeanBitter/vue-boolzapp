@@ -1,0 +1,139 @@
+:root {
+    --bs-body-bg: #DCDBD2;
+    --bs-body-bg-rgb: 220, 219, 210;
+
+    --bs-primary: #8EDAFC;
+    --bs-primary-rgb: 142, 218, 252;
+
+    --bs-light: #DCDBD2;
+    --bs-light-rgb: 220, 219, 210;
+}
+
+.bg-position {
+    background-color: #009688;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.container-app {
+    position: relative;
+    height: 95vh;
+    margin: 2.5vh 0;
+    background-color: white;
+    padding: 0;
+}
+
+.contacts-content {
+    width: 35%;
+    height: 100%;
+}
+
+.main-content {
+    width: 65%;
+    height: 100%;
+}
+
+.user-bar {
+    background-color: #EAEAEA;
+    padding: 0.5rem;
+}
+
+.user-nav {
+    color: #B1B1B1;
+}
+
+.notice {
+    background-color: #8EDAFC;
+}
+
+.bg-bell {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.img-size {
+    width: 50px;
+    height: 50px;
+}
+
+.img-size-bar {
+    width: 45px;
+    height: 45px;
+}
+
+.display-7 {
+    font-size: 0.8rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.my-active {
+    background-color: rgb(212, 213, 215);
+}
+
+.chat-section {
+    background-image: url(../../img/mine.jpg);
+}
+
+.message {
+    min-width: 150px;
+    max-width: 300px;
+    background-color: white;
+}
+
+.message-received {
+    align-self: flex-start;
+}
+
+.message-sent {
+    background-color: #D5F9BA;
+    align-self: flex-end;
+}
+
+.text-position {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    font-size: 0.6rem;
+    color: rgb(174, 187, 189);
+}
+
+.fa-solid, .fa-regular {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fa-solid:hover, .fa-regular:hover {
+    color: #455c5a;
+    transition: 0.3s;
+}
+
+.dropdown {
+    display: none;
+}
+
+a {
+    color: #6a7877;
+}
+
+a:hover {
+    color: #455c5a;
+}
+
+.message:hover .dropdown {
+    display: block;
+}
+
+.dropdown-position {
+    position: absolute;
+    right: 4px;
+    z-index: 1;
+    transform: translate(0, -100%);
+}
