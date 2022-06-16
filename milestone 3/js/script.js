@@ -9,6 +9,8 @@ l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 
 */
 
+dayjs.extend(dayjs_plugin_customParseFormat);
+
 const contacts = [
     {
         name: "Michele",
@@ -198,7 +200,7 @@ new Vue(
 
                 this.activeContact.messages.push(
                     {
-                        date: time,
+                        date: dayjs(),
                         message: newMessage,
                         status: "sent",
                     },
@@ -209,12 +211,16 @@ new Vue(
                 setTimeout(() => {
                     this.activeContact.messages.push(
                         {
-                            date: time,
+                            date: dayjs(),
                             message: "Ok!",
                             status: "received",
                         },
                     );
                 }, 1000);
+            },
+
+            formatDate(date) {
+                return dayjs(date, "DD/MM/YYYY HH:mm:ss").format("HH:mm");
             }
         },
     },
